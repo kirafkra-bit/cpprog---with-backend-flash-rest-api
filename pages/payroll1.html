@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll System</title>
+    <link rel="stylesheet" href="/style/payroll1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="sidebar"></div>
+
+    <div class="main-content">
+
+        <div class="page-header">
+            <div class="header-left">
+                <h1>Payroll System</h1>
+                <p class="breadcrumb">Dashboard / Payroll</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-process">
+                    <i class="fa-solid fa-gears"></i> Process Payroll
+                </button>
+                <button class="btn-generate">
+                    <i class="fa-solid fa-download"></i> Generate Report
+                </button>
+            </div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="summary-card">
+                <div class="card-label">Total Monthly Payroll</div>
+                <div class="card-value">—</div>
+                <div class="card-change positive">
+                    <i class="fa-solid fa-arrow-up"></i> 5% from last month
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">Total Employees</div>
+                <div class="card-value">—</div>
+                <div class="card-change">Active employees</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">Average Salary</div>
+                <div class="card-value">—</div>
+                <div class="card-change">Per employee</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">Processed This Month</div>
+                <div class="card-value">—</div>
+                <div class="card-change positive">All payments completed</div>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-wrapper">
+            <div class="table-header">
+                <h2>Employee Payroll Records</h2>
+                <div class="table-controls">
+                    <input type="text" class="search-input" placeholder="Search employee..." />
+                    <select class="filter-select">
+                        <option>All Departments</option>
+                        <option>IT Department</option>
+                        <option>HR Department</option>
+                        <option>Finance Department</option>
+                        <option>Sales Department</option>
+                        <option>Marketing Department</option>
+                        <option>Operations Department</option>
+                    </select>
+                </div>
+            </div>
+
+            <table class="payroll-table">
+                <thead>
+                    <tr>
+                        <th>Employee Name <i class="fa-solid fa-sort"></i></th>
+                        <th>Employee ID <i class="fa-solid fa-sort"></i></th>
+                        <th>Department <i class="fa-solid fa-sort"></i></th>
+                        <th>Basic Salary <i class="fa-solid fa-sort"></i></th>
+                        <th>Deductions <i class="fa-solid fa-sort"></i></th>
+                        <th>Net Salary <i class="fa-solid fa-sort"></i></th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated by payroll.js -->
+                </tbody>
+            </table>
+
+            <div class="pagination">
+                <div class="pagination-info">
+                    <select class="rows-select">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>50</option>
+                    </select>
+                    <span>of 0 employees</span>
+                </div>
+                <div class="pagination-controls"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/Js/sidebar.js"></script>
+    <script src="/Js/auth-guard.js"></script>
+    <script src="/Js/payroll.js"></script>
+
+</body>
+</html>

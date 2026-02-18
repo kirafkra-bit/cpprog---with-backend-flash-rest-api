@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/style/regstyle.css">
+</head>
+
+<body>
+
+<div class="container register-container">
+    <div class="logo">
+        <img src="/picture/ganda.png" alt="logo">
+    </div>
+
+    <form id="registerForm">
+        <div class="input">
+            <label for="user">Username</label>
+            <input type="text" id="user" placeholder="Create username" required>
+        </div>
+
+        <div class="input">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter email" required>
+        </div>
+
+        <div class="input">
+            <label for="pass">Password</label>
+            <input type="password" id="pass" placeholder="Create password" required>
+        </div>
+
+        <div class="input">
+            <label for="confirmPass">Confirm Password</label>
+            <input type="password" id="confirmPass" placeholder="Confirm password" required>
+        </div>
+
+        <button type="submit" class="loginbtn">Register</button>
+    </form>
+
+    <p class="registertext">
+        <a href="/pages/index.html">Already have an account? Login</a>
+    </p>
+</div>
+
+<script src="/Auth/register.js"></script>
+</body>
+</html>

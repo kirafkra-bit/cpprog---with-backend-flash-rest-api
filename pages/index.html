@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body>
+
+<div class="container">
+   
+    <div class="logo">
+        <img src="/picture/ganda.png" alt="logo">
+    </div>
+
+    <form id = "login" action="#" method="POST">
+        <div class="input">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="user" placeholder="Enter username" required>
+        </div>
+
+        <div class="input">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="pass" placeholder="Enter password" required>
+        </div>
+
+        <button type="submit" class="submit" class="loginbtn">Login</button>
+    </form>
+
+    <p class="registertext">
+        <a href="/pages/register.html">Don't have an account yet? Register here</a>
+    </p>
+</div>
+
+<script src = "/Auth/login.js"></script>
+<script src = "/js/middleware.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Franco, James Christian",
+    "employee_id": "123023902",
+    "department": "IT Department",
+    "basic_salary": 45000,
+    "deductions": 8500,
+    "status": "Paid",
+    "month": "February",
+    "year": 2026
+  },
+  {
+    "id": 2,
+    "name": "Reyes, Maria Santos",
+    "employee_id": "123023903",
+    "department": "HR Department",
+    "basic_salary": 42000,
+    "deductions": 7800,
+    "status": "Paid",
+    "month": "February",
+    "year": 2026
+  },
+  {
+    "id": 3,
+    "name": "Cruz, Angelo Miguel",
+    "employee_id": "123023904",
+    "department": "Finance Department",
+    "basic_salary": 48000,
+    "deductions": 9200,
+    "status": "Paid",
+    "month": "February",
+    "year": 2026
+  },
+  {
+    "id": 4,
+    "name": "Bautista, Lea Anne",
+    "employee_id": "123023905",
+    "department": "Marketing Department",
+    "basic_salary": 38000,
+    "deductions": 6900,
+    "status": "Paid",
+    "month": "February",
+    "year": 2026
+  },
+  {
+    "id": 5,
+    "name": "Garcia, Roberto Jr.",
+    "employee_id": "123023906",
+    "department": "Sales Department",
+    "basic_salary": 52000,
+    "deductions": 10500,
+    "status": "Paid",
+    "month": "February",
+    "year": 2026
+  },
+  {
+    "id": 6,
+    "name": "Mendoza, Patricia Joy",
+    "employee_id": "123023907",
+    "department": "Operations Department",
+    "basic_salary": 44000,
+    "deductions": 8200,
+    "status": "Paid",
+    "month": "February",
+    "year": 2026
+  }
+]

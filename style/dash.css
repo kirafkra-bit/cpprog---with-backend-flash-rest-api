@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 300px;
+    padding: 30px;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+/* Header */
+.header {
+    padding: 30px;
+}
+
+.header h1 {
+    font-weight: bold;
+}
+
+/* Quick Stats Bar */
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 30px 30px;
+}
+
+.stat-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item i {
+    font-size: 36px;
+    opacity: 0.9;
+}
+
+.stat-item h4 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* Title */
+.title {
+    margin: 30px 0 15px 0;
+    padding: 0 30px;
+}
+
+/* Cards */
+.cards {
+    padding: 0 30px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+    gap: 30px;
+}
+
+.card h3 {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.card canvas {
+    max-width: 180px;
+    max-height: 180px;
+    margin-top: 10px;
+}
+
+.employees { border: 2px solid #90aaf6; }
+.payroll { border: 2px solid #80f9cc; }
+.attendance { border: 2px solid #caedf2; }
+.performance { border: 2px solid #e9d6a5; }
+
+/* Dashboard Grid for Events and Top Performers */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    padding: 0 30px 30px;
+    margin-top: 30px;
+}
+
+/* Widget Styles */
+.widget {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.widget h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.widget h2 i {
+    color: #667eea;
+}
+
+/* Events Widget */
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.event-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: #f8f9fc;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.event-item:hover {
+    transform: translateX(5px);
+    background: #e8eaf6;
+}
+
+.event-date {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 60px;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.event-date .month {
+    display: block;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.event-details h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.event-details p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Top Performers Widget */
+.performers-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.performer-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 120px 80px;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.header-row {
+    background: #f8f9fc;
+    font-weight: bold;
+    color: #555;
+}
+
+.performer-row:not(.header-row) {
+    background: #fff;
+    border: 1px solid #e8eaf6;
+    transition: all 0.2s ease;
+}
+
+.performer-row:not(.header-row):hover {
+    background: #f8f9fc;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.rank {
+    font-weight: bold;
+}
+
+.rank.gold {
+    color: #ffd700;
+}
+
+.rank.silver {
+    color: #c0c0c0;
+}
+
+.rank.bronze {
+    color: #cd7f32;
+}
+
+.name {
+    font-weight: 500;
+    color: #333;
+}
+
+.score {
+    font-weight: bold;
+    color: #667eea;
+}
+
+/* Recent Activities */
+.recent-activities {
+    margin: 40px 30px 20px 30px;
+}
+
+.recent-activities h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.activity-card {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.activity-card:hover {
+    transform: translateX(5px);
+}
+
+.activity-time {
+    font-size: 12px;
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.activity-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.activity-list::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px 30px;
+    font-size: 13px;
+    color: #777;
+}

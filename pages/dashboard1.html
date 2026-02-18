@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/style/dashboard1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        .dot.red    { background: #fc8181; }
+        .dot.orange { background: #f6ad55; }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar"></div>
+
+    <div class="main-content">
+
+     
+        <div class="welcome-header">
+            <div class="welcome-text">
+                <p class="greeting">Hello, User!</p>
+                <h1>Good Morning</h1>
+            </div>
+            <button class="btn-check-in">Check In</button>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="dashboard-grid">
+
+            
+            <div class="widget attendance-widget">
+                <div class="widget-header">
+                    <h2>Attendance Summary</h2>
+                    <select class="week-select">
+                        <option>Week</option>
+                        <option>Month</option>
+                        <option>Year</option>
+                    </select>
+                </div>
+                <div class="chart-legend">
+                    <span><i class="dot blue"></i> Present</span>
+                    <span><i class="dot red"></i> Absent</span>
+                    <span><i class="dot orange"></i> Late</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="attendanceChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Absents Tod-->
+            <div class="widget leave-widget">
+                <h2>Employees on Leave</h2>
+                <table class="leave-table">
+                    <thead>
+                        <tr>
+                            <th>Employee's Name <i class="fa-solid fa-sort"></i></th>
+                            <th>Date <i class="fa-solid fa-sort"></i></th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+       
+        <div class="bottom-widgets">
+
+           
+            <div class="small-widget">
+                <h3>Absents And Late</h3>
+                <div class="leave-stats">
+                    <div class="leave-stat">
+                        <span class="stat-label"><i class="dot blue"></i> Absents</span>
+                        <span class="stat-value">—</span>
+                    </div>
+                    <div class="leave-stat">
+                        <span class="stat-label"><i class="dot gray"></i> Lates</span>
+                        <span class="stat-value">—</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="small-widget announcements-widget">
+                <h3>Announcements</h3>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/Js/sidebar.js"></script>
+    <script src="/Js/dashboard.js"></script>
+
+</body>
+</html>

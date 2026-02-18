@@ -1,0 +1,8 @@
+[
+  { "id": 1, "month": "February", "year": 2026, "present": 23, "absent": 2, "late": 4, "total_days": 25 },
+  { "id": 2, "month": "January",  "year": 2026, "present": 20, "absent": 4, "late": 2, "total_days": 24 },
+  { "id": 3, "month": "December", "year": 2025, "present": 22, "absent": 1, "late": 3, "total_days": 23 },
+  { "id": 4, "month": "November", "year": 2025, "present": 21, "absent": 3, "late": 1, "total_days": 24 },
+  { "id": 5, "month": "October",  "year": 2025, "present": 19, "absent": 5, "late": 2, "total_days": 24 }
+
+]

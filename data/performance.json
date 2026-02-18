@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Franco, James Christian",
+    "employee_id": "123023902",
+    "department": "IT Department",
+    "position": "Senior Network Engineer",
+    "score": 4.8,
+    "last_review": "2026-02-01",
+    "remarks": "Consistently exceeds expectations. Excellent problem-solving and leadership skills."
+  },
+  {
+    "id": 2,
+    "name": "Reyes, Maria Clara",
+    "employee_id": "123023903",
+    "department": "HR Department",
+    "position": "HR Manager",
+    "score": 4.6,
+    "last_review": "2026-02-03",
+    "remarks": "Outstanding people management and conflict resolution. Great team player."
+  },
+  {
+    "id": 3,
+    "name": "Santos, John Paulo",
+    "employee_id": "123023904",
+    "department": "Finance Department",
+    "position": "Financial Analyst",
+    "score": 4.2,
+    "last_review": "2026-01-28",
+    "remarks": "Strong analytical skills. Meets deadlines consistently. Room to grow in communication."
+  },
+  {
+    "id": 4,
+    "name": "Garcia, Anna Marie",
+    "employee_id": "123023905",
+    "department": "Marketing Department",
+    "position": "Marketing Specialist",
+    "score": 3.8,
+    "last_review": "2026-02-05",
+    "remarks": "Good creative output. Needs improvement in meeting project timelines."
+  },
+  {
+    "id": 5,
+    "name": "Mendoza, Carlos Miguel",
+    "employee_id": "123023906",
+    "department": "Sales Department",
+    "position": "Sales Executive",
+    "score": 3.2,
+    "last_review": "2026-01-30",
+    "remarks": "Meets basic targets but struggles with client retention. Coaching recommended."
+  },
+  {
+    "id": 6,
+    "name": "Dela Cruz, Lisa Ann",
+    "employee_id": "123023907",
+    "department": "Operations Department",
+    "position": "Operations Manager",
+    "score": 4.9,
+    "last_review": "2026-02-08",
+    "remarks": "Exceptional leadership. Streamlined operations resulting in 20% cost reduction."
+  }
+]

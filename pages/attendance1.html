@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="/style/attendance1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ── Modal ── */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .modal {
+            background: #fff;
+            border-radius: 12px;
+            width: 440px;
+            max-width: 95vw;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            overflow: hidden;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .modal-header h2 { font-size: 1rem; margin: 0; }
+        .modal-close {
+            background: none; border: none;
+            font-size: 1.5rem; cursor: pointer; color: #666;
+        }
+        .modal-body { padding: 1.5rem; }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+        .detail-label {
+            font-size: 0.75rem;
+            color: #888;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .detail-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2d3748;
+        }
+        .detail-value.success { color: #38a169; }
+        .detail-value.danger  { color: #e53e3e; }
+        .detail-value.warning { color: #d69e2e; }
+        .detail-value.primary { color: #4299e1; }
+        .rate-bar-wrap {
+            background: #e2e8f0;
+            border-radius: 99px;
+            height: 10px;
+            overflow: hidden;
+            margin-bottom: 0.6rem;
+        }
+        .rate-bar {
+            height: 100%;
+            background: #4299e1;
+            border-radius: 99px;
+            transition: width 0.4s ease;
+        }
+        .rate-note { font-size: 0.85rem; color: #555; margin: 0; }
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        .btn-cancel {
+            padding: 0.5rem 1.2rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            background: #fff;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar"></div>
+
+    <div class="main-content">
+
+        <!-- Header -->
+        <div class="page-header">
+            <div class="header-left">
+                <h1>Attendance</h1>
+                <p class="breadcrumb">Dashboard / Attendance</p>
+            </div>
+            <div class="header-right">
+                <select class="year-select">
+                    <option>2026</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="summary-card">
+                <div class="card-header">
+                    <span class="card-label">Total Working Days</span>
+                </div>
+                <div class="card-value">—</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-header">
+                    <span class="card-label">Present</span>
+                </div>
+                <div class="card-value success">—</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-header">
+                    <span class="card-label">Absent</span>
+                </div>
+                <div class="card-value danger">—</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-header">
+                    <span class="card-label">Late Arrivals</span>
+                </div>
+                <div class="card-value warning">—</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-header">
+                    <span class="card-label">Attendance Rate</span>
+                </div>
+                <div class="card-value primary">—</div>
+            </div>
+        </div>
+
+        <!-- Attendance Table -->
+        <div class="table-wrapper">
+            <div class="table-header">
+                <h2>Attendance Records</h2>
+                <button class="btn-generate">
+                    <i class="fa-solid fa-file-lines"></i> Generate Report
+                </button>
+            </div>
+
+            <table class="attendance-table">
+                <thead>
+                    <tr>
+                        <th>Month <i class="fa-solid fa-sort"></i></th>
+                        <th>Present <i class="fa-solid fa-sort"></i></th>
+                        <th>Absent <i class="fa-solid fa-sort"></i></th>
+                        <th>Late <i class="fa-solid fa-sort"></i></th>
+                        <th>Total Days <i class="fa-solid fa-sort"></i></th>
+                        <th>Rate <i class="fa-solid fa-sort"></i></th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated by attendance.js -->
+                </tbody>
+            </table>
+
+            <div class="pagination">
+                <div class="pagination-info">
+                    <select class="rows-select">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>50</option>
+                    </select>
+                    <span>out of 0</span>
+                </div>
+                <div class="pagination-controls"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/Js/sidebar.js"></script>
+    <script src="/Js/auth-guard.js"></script>
+    <script src="/Js/attendance.js"></script>
+
+</body>
+</html>

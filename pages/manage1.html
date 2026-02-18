@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Employees</title>
+    <link rel="stylesheet" href="/style/manage1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* modal ule */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .modal {
+            background: #fff;
+            border-radius: 12px;
+            width: 480px;
+            max-width: 95vw;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            overflow: hidden;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .modal-header h2 { font-size: 1.1rem; margin: 0; }
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+            line-height: 1;
+        }
+        .modal-body {
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        .form-group label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #555;
+        }
+        .form-group input,
+        .form-group select {
+            padding: 0.5rem 0.75rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #4299e1;
+        }
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        .btn-cancel {
+            padding: 0.5rem 1.2rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            background: #fff;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .btn-save {
+            padding: 0.5rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            background: #4299e1;
+            color: #fff;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .btn-save:hover { background: #3182ce; }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar"></div>
+
+    <div class="main-content">
+
+        <div class="page-header">
+            <div class="header-left">
+                <h1>Manage Employees</h1>
+                <p class="breadcrumb">Dashboard / Employees</p>
+            </div>
+            <button class="btn-add-employee">
+                <i class="fa-solid fa-user-plus"></i> Add New Employee
+            </button>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-controls">
+                <input type="text" class="search-input" placeholder="Search employees..." />
+                <select class="filter-select">
+                    <option>All Departments</option>
+                    <option>IT Department</option>
+                    <option>HR Department</option>
+                    <option>Finance Department</option>
+                    <option>Marketing Department</option>
+                    <option>Sales Department</option>
+                    <option>Operations Department</option>
+                </select>
+            </div>
+
+            <table class="employee-table">
+                <thead>
+                    <tr>
+                        <th><i class="fa-solid fa-user-tie"></i></th>
+                        <th>Employee Name <i class="fa-solid fa-sort"></i></th>
+                        <th>Employee ID <i class="fa-solid fa-sort"></i></th>
+                        <th>Department <i class="fa-solid fa-sort"></i></th>
+                        <th>Position <i class="fa-solid fa-sort"></i></th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+
+            <div class="pagination">
+                <div class="pagination-info">
+                    <select class="rows-select">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>50</option>
+                    </select>
+                    <span>of 0 employees</span>
+                </div>
+                <div class="pagination-controls">
+                    <button class="page-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/Js/sidebar.js"></script>
+    <script src="/Js/auth-guard.js"></script>   
+    <script src="/Js/manage.js"></script>
+
+</body>
+</html>

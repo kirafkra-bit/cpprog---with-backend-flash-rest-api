@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Franco James Christian",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 1,
+    "image": "/data/img/122.png"
+  },
+  {
+    "name": "Garcia, Reunar",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 2,
+    "image": "/data/img/122.png"
+  },
+  {
+    "name": "Jenefer Lirio",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 3,
+    "image": "/data/img/lirio.png"
+  },
+  {
+    "name": "HANNAH ANSOC",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 4,
+    "image": "/data/img/ansoc.jpeg"
+  },
+  {
+    "name": "Jake bombales",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 5,
+    "image": "/data/img/bombales.jpg"
+  },
+  {
+    "name": "Areola Leomar Jay",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 6,
+    "image": "/data/img/ariola.jpg"
+  },
+  {
+    "name": "larumbe, Eldron Jestine J",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 7,
+    "image": "/data/img/larumbe.png"
+  },
+  {
+    "name": "Jimenez, Melchor",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 8,
+    "image": "/data/img/122.png"
+  },
+  {
+    "name": "GERLINGO, LOUISSE",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 9,
+    "image": "/data/img/gerlingo.jpg"
+  },
+  {
+    "name": "Everly Tamparong",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 10,
+    "image": "/data/img/tamparong.png"
+  },
+  {
+    "name": "Pauling Hipolito",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 11,
+    "image": "/data/img/122.png"
+  },
+
+  {
+    "name": "Franco James Christian",
+    "employee_id": "92122",
+    "department": "IT Department",
+    "position": "Senior Developer",
+    "date_hired": "2017-02-12",
+    "status": "Active",
+    "id": 1,
+    "image": "/data/img/122.png"
+  }
+
+
+
+  
+]
+

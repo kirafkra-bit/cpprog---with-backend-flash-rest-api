@@ -1,0 +1,14 @@
+[
+  {
+    "username": "admin",
+    "email": "admin@aseana.com",
+    "password": "admin123",
+    "role": "Admin"
+  },
+  {
+    "username": "user",
+    "email": "user@gmail.com",
+    "password": "user123",
+    "role": "User"
+  }
+]

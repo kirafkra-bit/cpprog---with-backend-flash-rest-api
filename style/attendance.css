@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+
+.main-content {
+    margin-left: 300px;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+
+.header {
+    padding: 30px;
+}
+
+.header h1 {
+    font-weight: bold;
+    color: #333;
+}
+
+
+.attendance-cards {
+    padding: 0 30px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.attendance-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.attendance-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+}
+
+.attendance-card.present {
+    border: 2px solid #80f9cc;
+}
+
+.attendance-card.present .card-icon {
+    background: linear-gradient(135deg, #1cc88a 0%, #17a673 100%);
+}
+
+.attendance-card.absent {
+    border: 2px solid #f8b4b4;
+}
+
+.attendance-card.absent .card-icon {
+    background: linear-gradient(135deg, #e74a3b 0%, #c93929 100%);
+}
+
+.attendance-card.late {
+    border: 2px solid #e9d6a5;
+}
+
+.attendance-card.late .card-icon {
+    background: linear-gradient(135deg, #f6c23e 0%, #dda20a 100%);
+}
+
+.attendance-card.leave {
+    border: 2px solid #caedf2;
+}
+
+.attendance-card.leave .card-icon {
+    background: linear-gradient(135deg, #36b9cc 0%, #258391 100%);
+}
+
+.card-info {
+    flex: 1;
+}
+
+.card-info h3 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.card-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.card-subtitle {
+    font-size: 13px;
+    color: #777;
+}
+
+
+.table-section {
+    padding: 0 30px 30px;
+    margin-top: 20px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table-header h2 i {
+    color: #667eea;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 10px;
+}
+
+#monthFilter {
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    background: white;
+}
+
+.btn-export {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-export:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+
+.table-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f8f9fc;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.badge.present {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge.absent {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.badge.late {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.badge.leave {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+

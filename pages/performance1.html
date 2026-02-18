@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Tracker</title>
+    <link rel="stylesheet" href="/style/performance1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ── Modal ── */
+        .modal-overlay {
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.45);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 1000;
+        }
+        .modal {
+            background: #fff; border-radius: 12px;
+            width: 520px; max-width: 95vw;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18); overflow: hidden;
+        }
+        .modal-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.2rem 1.5rem; border-bottom: 1px solid #e2e8f0;
+        }
+        .modal-header h2 { font-size: 1rem; margin: 0; }
+        .modal-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #666; }
+        .modal-body {
+            padding: 1.5rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+        }
+        .form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+        .form-group label { font-size: 0.78rem; font-weight: 600; color: #555; text-transform: uppercase; }
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 0.5rem 0.75rem; border: 1px solid #cbd5e0;
+            border-radius: 6px; font-size: 0.9rem; outline: none; font-family: inherit;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #4299e1; }
+        .form-group textarea { resize: vertical; }
+        .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+        .detail-item { display: flex; flex-direction: column; gap: 0.2rem; }
+        .detail-label { font-size: 0.75rem; color: #888; font-weight: 600; text-transform: uppercase; }
+        .detail-value { font-size: 1.1rem; font-weight: 600; color: #2d3748; }
+        .score-bar-wrap {
+            background: #e2e8f0; border-radius: 99px; height: 10px;
+            overflow: hidden; margin-bottom: 1rem;
+        }
+        .score-bar { height: 100%; border-radius: 99px; transition: width 0.4s ease; }
+        .score-bar.excellent { background: #38a169; }
+        .score-bar.good      { background: #4299e1; }
+        .score-bar.average   { background: #d69e2e; }
+        .score-bar.poor      { background: #e53e3e; }
+        .remarks-box { padding: 0.75rem; background: #f7fafc; border-radius: 8px; }
+        .remarks-box p { margin: 0.4rem 0 0; font-size: 0.9rem; color: #444; line-height: 1.5; }
+        .modal-footer {
+            display: flex; justify-content: flex-end; gap: 0.75rem;
+            padding: 1rem 1.5rem; border-top: 1px solid #e2e8f0;
+        }
+        .btn-cancel {
+            padding: 0.5rem 1.2rem; border: 1px solid #cbd5e0;
+            border-radius: 6px; background: #fff; cursor: pointer; font-size: 0.9rem;
+        }
+        .btn-save {
+            padding: 0.5rem 1.2rem; border: none; border-radius: 6px;
+            background: #4299e1; color: #fff; cursor: pointer;
+            font-size: 0.9rem; font-weight: 600;
+        }
+        .btn-save:hover { background: #3182ce; }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar"></div>
+
+    <div class="main-content">
+
+        <div class="page-header">
+            <div class="header-left">
+                <h1>Performance Tracker</h1>
+                <p class="breadcrumb">Dashboard / Performance</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-new-review">
+                    <i class="fa-solid fa-plus"></i> New Review
+                </button>
+                <button class="btn-export">
+                    <i class="fa-solid fa-download"></i> Export Report
+                </button>
+            </div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="summary-card excellent">
+                <div class="card-label">Excellent Performers</div>
+                <div class="card-value">—</div>
+                <div class="card-percentage">—</div>
+            </div>
+            <div class="summary-card good">
+                <div class="card-label">Good Performers</div>
+                <div class="card-value">—</div>
+                <div class="card-percentage">—</div>
+            </div>
+            <div class="summary-card average">
+                <div class="card-label">Average Performers</div>
+                <div class="card-value">—</div>
+                <div class="card-percentage">—</div>
+            </div>
+            <div class="summary-card poor">
+                <div class="card-label">Needs Improvement</div>
+                <div class="card-value">—</div>
+                <div class="card-percentage">—</div>
+            </div>
+        </div>
+
+        <!-- Performance Table -->
+        <div class="table-wrapper">
+            <div class="table-header">
+                <h2>Employee Performance Reviews</h2>
+                <div class="table-controls">
+                    <input type="text" class="search-input" placeholder="Search employee..." />
+                    <select class="filter-rating filter-select">
+                        <option>All Ratings</option>
+                        <option>Excellent (4.5-5.0)</option>
+                        <option>Good (3.5-4.4)</option>
+                        <option>Average (2.5-3.4)</option>
+                        <option>Needs Improvement</option>
+                    </select>
+                    <select class="filter-dept filter-select">
+                        <option>All Departments</option>
+                        <option>IT Department</option>
+                        <option>HR Department</option>
+                        <option>Finance Department</option>
+                        <option>Sales Department</option>
+                        <option>Marketing Department</option>
+                        <option>Operations Department</option>
+                    </select>
+                </div>
+            </div>
+
+            <table class="performance-table">
+                <thead>
+                    <tr>
+                        <th>Employee Name <i class="fa-solid fa-sort"></i></th>
+                        <th>Employee ID <i class="fa-solid fa-sort"></i></th>
+                        <th>Department <i class="fa-solid fa-sort"></i></th>
+                        <th>Position <i class="fa-solid fa-sort"></i></th>
+                        <th>Score <i class="fa-solid fa-sort"></i></th>
+                        <th>Rating</th>
+                        <th>Last Review <i class="fa-solid fa-sort"></i></th>
+                
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated by performance.js -->
+                </tbody>
+            </table>
+
+            <div class="pagination">
+                <div class="pagination-info">
+                    <select class="rows-select">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>50</option>
+                    </select>
+                    <span>of 0 employees</span>
+                </div>
+                <div class="pagination-controls"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/Js/sidebar.js"></script>
+    <script src="/Js/auth-guard.js"></script>
+    <script src="/Js/performance.js"></script>
+
+</body>
+</html>

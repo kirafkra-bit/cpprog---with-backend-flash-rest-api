@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         alert(`Checked in at ${now}`);
     };
 
-    // Attendance chart + leave balance
+    
     const attendance = await fetch("/api/attendance").then(r => r.json());
     const latest6    = attendance.slice(0, 6).reverse();
 

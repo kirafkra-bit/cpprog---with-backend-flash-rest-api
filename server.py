@@ -11,10 +11,10 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 @app.route("/data/img/<path:f>")
 def data_img(f):
     img_dir = os.path.join(BASE_DIR, "data", "img")
-    print("Serving from:", img_dir)  # add this to check in terminal
+    print("Serving from:", img_dir)  
     return send_from_directory(img_dir, f)
 
-#  Helpers 
+
 
 
 

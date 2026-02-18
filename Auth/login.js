@@ -18,7 +18,7 @@ login.addEventListener("submit", async (e) => {
         if (result.success) {
             alert("Login Successful");
 
-            // Save the logged-in user data
+            // Save user data pag in session
             sessionStorage.setItem("currentUser", JSON.stringify(result.data));
 
             // Redirect to dashboard

@@ -62,7 +62,7 @@ function changePage(p) {
     renderPage();
 }
 
-// modal functions remain unchanged
+
 
 function showModal(e = null) {
     document.querySelector(".modal-overlay")?.remove();

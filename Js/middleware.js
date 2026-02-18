@@ -2,7 +2,7 @@
 
 const Middleware = {
 
-    // ── Internal fetch helper ──────────────────────────────────────────────
+    
     _fetch: async function(url, method = "GET", body = null) {
         const options = {
             method,
@@ -13,7 +13,7 @@ const Middleware = {
         return res.json();
     },
 
-    // ── Auth ──────────────────────────────────────────────────────────────
+    //  Auth 
     login: async function(username, password) {
         return this._fetch("/api/login", "POST", { username, password });
     },

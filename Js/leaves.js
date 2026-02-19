@@ -92,3 +92,5 @@ function updateTable(leaves) {
         tableBody.innerHTML += row;
     });
 }
+
+

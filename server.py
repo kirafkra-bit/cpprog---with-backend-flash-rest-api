@@ -110,7 +110,7 @@ def delete_one(file, rid):
 
 # rest api toh gamit get tsaka post / for loop ng modules 
 
-for module in ["hr", "payroll", "attendance", "performance"]:
+for module in ["hr", "payroll", "attendance", "performance", "leaves"]:
     file = f"{module}.json"
 
     app.add_url_rule(f"/api/{module}",        f"get_{module}",    lambda f=file: get_all(f),              methods=["GET"])

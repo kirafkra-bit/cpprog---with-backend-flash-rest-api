@@ -1,7 +1,7 @@
 [
   {
-    "name": "Franco James Christian",
-    "employee_id": "92122",
+    "name": "FRANCO, JAMES CHRISTIAN",
+    "employee_id": "92121",
     "department": "IT Department",
     "position": "Senior Developer",
     "date_hired": "2017-02-12",
@@ -10,90 +10,90 @@
     "image": "/data/img/122.png"
   },
   {
-    "name": "Garcia, Reimar",
+    "name": "GARCIA, REIMAR",
     "employee_id": "92122",
     "department": "IT Department",
-    "position": "Senior Developer",
+    "position": "IT Support",
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 2,
     "image": "/data/img/mar.png"
   },
   {
-    "name": "Jenefer Lirio",
-    "employee_id": "92122",
+    "name": "LIRIO, JENEFER",
+    "employee_id": "92123",
     "department": "IT Department",
-    "position": "Senior Developer",
+    "position": "IT Manager",
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 3,
     "image": "/data/img/lirio.png"
   },
   {
-    "name": "HANNAH ANSOC",
-    "employee_id": "92122",
-    "department": "IT Department",
-    "position": "Senior Developer",
+    "name": "HIPOLITO, HANNAH PAULINE",
+    "employee_id": "92124",
+    "department": "HR Department",
+    "position": "HR Manager",
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 4,
     "image": "/data/img/ansoc.jpeg"
   },
   {
-    "name": "Jake bombales",
-    "employee_id": "92122",
-    "department": "IT Department",
-    "position": "Senior Developer",
+    "name": "BOMBALES, JAKE",
+    "employee_id": "92125",
+    "department": "HR Department",
+    "position": "HR Assistant",
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 5,
     "image": "/data/img/bombales.jpg"
   },
   {
-    "name": "Areola Leomar Jay",
-    "employee_id": "92122",
-    "department": "IT Department",
-    "position": "Senior Developer",
+    "name": "AREOLA, LEOMAR JAY",
+    "employee_id": "92126",
+    "department": "Marketing Department",
+    "position": "Marketing Assistant",
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 6,
     "image": "/data/img/ariola.jpg"
   },
   {
-    "name": "larumbe, Eldron Jestine J",
-    "employee_id": "92122",
-    "department": "IT Department",
-    "position": "Senior Developer",
+    "name": "LARUMBE, ELDRON JESTINE",
+    "employee_id": "92127",
+    "department": "Marketing Department",
+    "position": "Marketing Manager",
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 7,
     "image": "/data/img/larumbe.png"
   },
   {
-    "name": "Jimenez, Melchor",
-    "employee_id": "92122",
-    "department": "IT Department",
-    "position": "Senior Developer",
+    "name": "JIMENEZ, MELCHOR",
+    "employee_id": "92128",
+    "department": "Operations Department",
+    "position": "Operations Manager",
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 8,
-    "image": "/data/img/122.png"
+    "image": "/data/img/129.png"
   },
   {
     "name": "GERLINGO, LOUISSE",
-    "employee_id": "92122",
-    "department": "IT Department",
-    "position": "Senior Developer",
+    "employee_id": "92130",
+    "department": "Finance Department",
+    "position": "Finance Manager",
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 9,
     "image": "/data/img/gerlingo.jpg"
   },
   {
-    "name": "Everly Tamparong",
-    "employee_id": "92122",
-    "department": "IT Department",
-    "position": "Senior Developer",
+    "name": "TAMPARONG, EVERLY",
+    "employee_id": "92131",
+    "department": "Sales Department",
+    "position": "Sales Manager",
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 10,
@@ -101,28 +101,12 @@
   },
   {
     "name": "Pauling Hipolito",
-    "employee_id": "92122",
+    "employee_id": "92132",
     "department": "IT Department",
     "position": "Senior Developer",
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 11,
     "image": "/data/img/122.png"
-  },
-
-  {
-    "name": "Franco James Christian",
-    "employee_id": "92122",
-    "department": "IT Department",
-    "position": "Senior Developer",
-    "date_hired": "2017-02-12",
-    "status": "Active",
-    "id": 1,
-    "image": "/data/img/122.png"
   }
-
-
-
-  
 ]
-

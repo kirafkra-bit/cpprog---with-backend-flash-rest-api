@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { employeeName: "JIMENEZ, MELCHOR", status: "Pending", date: "2026-08-10" },
         { employeeName: "GERLINGO, LOUISSE", status: "Approved", date: "2026-09-05" },
         { employeeName: "TAMPARONG, EVERLY", status: "Pending", date: "2026-10-12" },
-        { employeeName: "Pauling Hipolito", status: "Rejected", date: "2026-11-22" }
+        { employeeName: "OGANIA, KENZO", status: "Rejected", date: "2026-11-22" }
     ];
 
     staticLeaves.forEach(leave => addLeave(leave));

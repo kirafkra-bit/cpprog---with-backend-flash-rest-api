@@ -77,7 +77,7 @@
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 8,
-    "image": "/data/img/129.png"
+    "image": "/data/img/Jimenez, Melchor.PNG"
   },
   {
     "name": "GERLINGO, LOUISSE",
@@ -100,13 +100,13 @@
     "image": "/data/img/tamparong.png"
   },
   {
-    "name": "Pauling Hipolito",
+    "name": "OGANIA, KENZO",
     "employee_id": "92132",
     "department": "IT Department",
     "position": "Senior Developer",
     "date_hired": "2017-02-12",
     "status": "Active",
     "id": 11,
-    "image": "/data/img/122.png"
+    "image": "/data/img/ogania.png"
   }
 ]

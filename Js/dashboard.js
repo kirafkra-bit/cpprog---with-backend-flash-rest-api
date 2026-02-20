@@ -43,11 +43,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // Employees on leave
-    const employees = await fetch("/api/hr").then(r => r.json());
-    const onLeave   = employees.filter(e => e.status === "On Leave");
-    document.querySelector(".leave-table tbody").innerHTML = onLeave.length
-        ? onLeave.map(e => `<tr><td>${e.name}</td><td>${e.date_hired || "—"}</td></tr>`).join("")
-        : `<tr><td colspan="2" style="text-align:center;color:#888;padding:1rem;">No employees on leave.</td></tr>`;
+  const leaves = JSON.parse(localStorage.getItem("leavesData")) || [];
+
+console.log("Dashboard leaves:", leaves);
+
+const onLeave = leaves.filter(l => l.status === "Approved");
+
+const table = document.querySelector(".leave-table tbody");
+
+if (!table) {
+    console.error("Table not found!");
+} else {
+    table.innerHTML = onLeave.length
+        ? onLeave.map(e => `
+            <tr>
+                <td>${e.employeeName}</td>
+                <td>${e.date}</td>
+            </tr>
+        `).join("")
+        : `<tr>
+            <td colspan="2">No employees on leave</td>
+        </tr>`;
+
+}
 
     // Announcements
     const perf = await fetch("/api/performance").then(r => r.json());

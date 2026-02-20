@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ===== YOUR EMPLOYEE LEAVES =====
     const staticLeaves = [
-        { employeeName: "FRANCO, JAMES CHRISTIAN", status: "Pending", date: "2026-01-15" },
+        { employeeName: "FRANCO, JAMES CHRISTIAN", status: "Approved", date: "2026-02-20" },
         { employeeName: "GARCIA, REIMAR", status: "Approved", date: "2026-02-10" },
-        { employeeName: "LIRIO, JENEFER", status: "Approved", date: "2026-03-05" },
+        { employeeName: "LIRIO, JENEFER", status: "Pending", date: "2026-03-05" },
         { employeeName: "HIPOLITO, HANNAH PAULINE", status: "Approved", date: "2026-04-20" },
         { employeeName: "BOMBALES, JAKE", status: "Pending", date: "2026-05-01" },
         { employeeName: "AREOLA, LEOMAR JAY", status: "Approved", date: "2026-06-15" },
@@ -37,27 +37,35 @@ document.addEventListener('DOMContentLoaded', function () {
         { employeeName: "OGANIA, KENZO", status: "Rejected", date: "2026-11-22" }
     ];
 
-    staticLeaves.forEach(leave => addLeave(leave));
+    staticLeaves.forEach(leave => {
+    addLeave(leave);
+});
+
+console.log("Saved leaves:", allLeaves);
+localStorage.setItem("leavesData", JSON.stringify(allLeaves));
 
     // ===== ADD LEAVE FUNCTION =====
     function addLeave(leave) {
 
-        let color =
-            leave.status === "Approved" ? "green" :
-            leave.status === "Pending" ? "orange" :
-            "red";
+    let color =
+        leave.status === "Approved" ? "green" :
+        leave.status === "Pending" ? "orange" :
+        "red";
 
-        calendar.addEvent({
-            title: leave.employeeName + " - " + leave.status,
-            start: leave.date,
-            color: color
-        });
+    calendar.addEvent({
+        title: leave.employeeName + " - " + leave.status,
+        start: leave.date,
+        color: color
+    });
 
-        allLeaves.push(leave);
+    allLeaves.push(leave);
 
-        updateSummary(allLeaves);
-        updateTable(allLeaves);
-    }
+    // SAVE TO LOCAL STORAGE
+    localStorage.setItem("leavesData", JSON.stringify(allLeaves));
+
+    updateSummary(allLeaves);
+    updateTable(allLeaves);
+}
 
 });
 
